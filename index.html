@@ -1,0 +1,47 @@
+<!--
+    
+    PRIMEIRO PROJETO - OTHO MARCONI
+          ******IMC Calc******
+-->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valendo um lanche!</title>
+
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/calculator--v2.png">
+</head>
+
+<body>
+    <h2>Calculadora de IMC</h2>
+
+	<input type="number" class="pes" name="peso" placeholder="Peso"/>
+    <br><br>
+	<input type="number" class="alt" name="altura" placeholder="Altura"/>
+    <br><br>
+	<input type="button" class="btn" value="Calc.">
+    <br/><br><br>
+	<span class="result">Resultado</span>
+
+    <br><br><br>
+    <p>O que é IMC? <a href="https://www.significados.com.br/imc/" target="_blank" >Descubra!</a></p>
+
+
+</body>
+
+<script>
+	
+ 	btn =document.querySelector(".btn");
+ 	btn.addEventListener("click", ()=>{
+ 		peso   = parseFloat(document.querySelector(".pes").value);
+ 		altura = parseFloat(document.querySelector(".alt").value);
+ 		result   = (peso /(altura * altura)).toFixed(2);
+ 		result = "IMC = " + result;
+ 		document.querySelector(".result").innerHTML = result;});
+
+</script>
+
+</html>
